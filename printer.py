@@ -83,7 +83,7 @@ def print_all_patient_histories(patient_history_list):
         print(tabulate(table_data, headers = table_headers, tablefmt = "fancy_grid"))
 
 def print_continue_prompt():
-    print("Tekan tombol apa saja untuk melanjutkan...")
+    print("Tekan <Enter> untuk melanjutkan...")
     input()
 
 def show_menu():
