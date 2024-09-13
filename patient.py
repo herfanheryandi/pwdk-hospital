@@ -45,14 +45,14 @@ def add_patient_history(action, patient, updated_patient = None):
     patient_history = {
         "id": patient["id"], 
         "nama": patient["nama"], 
-        "usia": patient["usia"],
+        "usia": str(patient["usia"]),
         "jenis_kelamin": patient["jenis_kelamin"],
         "nomor_kamar": patient["nomor_kamar"],
         "bpjs": str(patient["bpjs"]),
         "action": action,
         "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
-    if action == 'Perbarui':
+    if action == "Perbarui":
         for key in patient.keys():
             if patient[key] != updated_patient[key]:
                 patient_history[key] = patient_history[key] + " -> " + str(updated_patient[key])
