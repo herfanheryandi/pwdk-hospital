@@ -97,8 +97,8 @@ def process_update():
     print_patient(updated_patient)
     confirm = input_validate_boolean("Perbarui Data Pasien? [Y/N]: ", "Konfirmasi")
     if confirm:
-        update_patient(patient, updated_patient)
         add_patient_history("Perbarui", patient, updated_patient)
+        update_patient(patient, updated_patient)
         print_notification("Berhasil perbarui pasien", "success",  0.25)
     else:
         print_notification("Batal perbarui pasien", "info",  0.25)
